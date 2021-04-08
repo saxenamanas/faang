@@ -1,0 +1,40 @@
+@import '../../scss/mix';
+
+.btn{
+    width:fit-content;
+    cursor: pointer;
+    background: white;
+    color: $text-color;
+    font-size: 16px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    margin-right: 50px;
+    text-transform: uppercase;
+    z-index: 0;
+    outline: none;
+}
+
+.btn:hover{
+    background: linear-gradient(252deg,$start,$end);
+    color: #fff;
+}
+
+.btn-grad{
+    background: linear-gradient(252deg,$start,$end);
+    color: #fff;
+    padding: 20px 40px;
+    border: none;
+    text-transform: uppercase;
+    border-radius: 30px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    cursor: pointer;
+    outline: none;
+    transition: all;
+
+}
+
+.btn-grad:hover{
+    background: linear-gradient(252deg,$end,$start);
+}

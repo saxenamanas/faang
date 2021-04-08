@@ -1,0 +1,117 @@
+@import "../../scss/mix";
+
+@keyframes reg-anim {
+    0% {
+        margin-right: -200px;
+        opacity: 0;
+    }
+    50% {
+        margin-right: -100px;
+        opacity: 0.5;
+    }
+    100% {
+        right: 0px;
+        opacity: 1;
+    }
+}
+
+.main-wrapper {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+}
+
+.left-image {
+    flex: 0.5;
+    // background-image: linear-gradient(45deg, $start, $end),
+    //     url("https://media.geeksforgeeks.org/wp-content/cdn-uploads/20190710102234/download3.png");
+    background-image: linear-gradient(45deg, rgba(255, 120, 84, 0.5), rgba(253, 38, 125, 0.5)),
+        url("../../assets/background.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-tag {
+    text-align: center;
+    color: #fff;
+    font-weight: 700;
+    font-size: 3.5vw;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+.right-content {
+    flex: 0.5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: hsl(0, 0%, 98%);
+    overflow-y: scroll;
+}
+
+.form-heading {
+    color: rgb(22, 20, 20);
+    display: block;
+}
+
+.form-container {
+    animation: reg-anim 2s 1;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    padding: 30px;
+    max-width: 500px;
+    border-radius: 20px;
+    // box-shadow:0px 3px 0px 6px #ccc;
+}
+
+.normal-flex {
+    display: flex;
+    justify-content: space-between;
+}
+
+.w-100 {
+    width: 100%;
+}
+
+.w-40 {
+    width: 40%;
+}
+
+input,
+textarea {
+    margin: 10px 0px;
+    padding: 10px 20px;
+    outline: none;
+}
+
+.form-main {
+    display: flex;
+    flex-direction: column;
+}
+
+.btn-grad {
+    margin-top: 10px;
+    background: linear-gradient(252deg, $start, $end);
+    color: #fff;
+    padding: 10px 40px;
+    border: none;
+    text-transform: uppercase;
+    border-radius: 30px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    cursor: pointer;
+    outline: none;
+    transition: all;
+}
+
+.btn-grad:hover {
+    background: linear-gradient(252deg, $end, $start);
+}

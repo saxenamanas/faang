@@ -1,0 +1,105 @@
+@import "../../scss/mix";
+
+.dashboard-wrap {
+    display: grid;
+    grid-template-columns: 1fr 3.8fr;
+    height: 100vh;
+    overflow-x: scroll;
+}
+
+.left-wrap {
+    min-width: 300px;
+    .header-wrap {
+        padding: 0px 10px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 70px;
+        background: linear-gradient(252deg, $start, $end);
+
+        .lead-items {
+            display: flex;
+            align-items: center;
+            .lead-logo {
+                border: 1px solid #fff;
+                width: 35px;
+                height: 35px;
+                border-radius: 50%;
+            }
+            span {
+                margin-left: 10px;
+                color: white;
+                font-size: 18px;
+            }
+        }
+    }
+
+
+    .tab-wrap{
+        cursor: pointer;
+        font-weight: 700;
+        padding: 10px 0px;
+        display: flex;
+        justify-content: space-around;
+
+        .tab-active{
+            border-bottom: 2px solid $text-color;
+        }
+    }
+}
+
+.right-wrap {
+    min-width: 680px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #F5F7FA;
+}
+
+.noselect {
+    -webkit-touch-callout: none; /* iOS Safari */
+      -webkit-user-select: none; /* Safari */
+       -khtml-user-select: none; /* Konqueror HTML */
+         -moz-user-select: none; /* Old versions of Firefox */
+          -ms-user-select: none; /* Internet Explorer/Edge */
+              user-select: none; /* Non-prefixed version, currently
+                                    supported by Chrome, Edge, Opera and Firefox */
+  }
+
+.person-img{
+    position: relative;
+    object-fit: cover;
+    height: 450px;
+    width: 350px;
+    border-radius: 5px;
+    box-shadow:  2px 2px 4px 5px #ccc;
+}
+
+.person-wrap{
+    display: flex;
+    flex-direction: column;
+}
+
+.person-details{
+    position: absolute;
+    color: white;
+}
+
+
+.person-actions{
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.icon-holder{
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    border-radius: 50%;
+    background: #fff;
+    box-shadow:  2px 2px 4px 5px #ccc;
+}
