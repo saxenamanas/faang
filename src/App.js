@@ -25,14 +25,14 @@ function App() {
             <Route path="/login">
               <Login />
             </Route>
+            <Route path="/home">
+              <Dashboard />
+            </Route>
             <Route path="/register">
               <Register />
             </Route>
             <Route path="/">
               <Landing />
-            </Route>
-            <Route path="/home">
-              <Dashboard />
             </Route>
           </Switch>
         </Router>
