@@ -1,21 +1,36 @@
-import React, { useState } from 'react';
+import React, { useState,useEffect } from 'react';
 import './Dashboard.scss';
 import logo from '../../assets/background.jpg';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHeart, faTimes, faRedoAlt } from '@fortawesome/free-solid-svg-icons';
-
+import { Redirect } from "react-router-dom";
+import {declineAuth} from '../../redux/features';
+import { useSelector, useDispatch } from 'react-redux';
 
 function Dashboard() {
+    const auth = useSelector((state) => state.featureSlice.isAuthenticated);
 
+    useEffect(() => {
+        if(!auth){
+            setRedirect('/')
+        }
+    }, [])
 
+    let dispatch = useDispatch();
+    const [redirect,setRedirect] = useState(null);
     const [activeTab, setActiveTab] = useState(0);
+    if(redirect!=null)
+        return <Redirect to={redirect}></Redirect>
     return (
         <div className="dashboard-wrap">
             <div className="left-wrap">
                 <div className="header-wrap">
                     <div className="lead-items">
                         <img className="lead-logo" src={logo} alt="" srcset="" />
-                        <span>My Profile</span>
+                        <span onClick={()=>{
+                            dispatch(declineAuth())
+                            localStorage.removeItem('token');
+                        }}>My Profile</span>
                     </div>
                     <div className="trail-item">
 

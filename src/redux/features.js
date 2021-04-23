@@ -4,12 +4,18 @@ export const featureSlice = createSlice({
   name: 'counter',
   initialState: {
     isLoading:false,
+    isAuthenticated:false,
   },
   reducers: {
-    openModal: (state) => {
-        console.log(state.openPop);
-      state.openPop = !state.openPop;
+
+    confirmAuth:(state)=>{
+      state.isAuthenticated = true;
     },
+
+    declineAuth:(state)=>{
+      state.isAuthenticated = false;
+    },
+
     openLoading:(state)=>{
       state.isLoading = true;
     },
@@ -20,6 +26,6 @@ export const featureSlice = createSlice({
 })
 
 // Action creators are generated for each case reducer function
-export const { openModal,openLoading,closeLoading } = featureSlice.actions
+export const { openLoading,closeLoading,confirmAuth,declineAuth } = featureSlice.actions
 
 export default featureSlice.reducer
